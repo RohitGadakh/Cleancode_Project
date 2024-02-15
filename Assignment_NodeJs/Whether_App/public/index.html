@@ -1,0 +1,92 @@
+<!-- // const axios = require('axios');
+
+// const apiKey = 'cbe5ca98cdcfe2f79192326e2e3a894f';
+// const city = 'india';
+
+// //const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+// const apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+// axios.get(apiUrl)
+//   .then(response => {
+//     const weatherData = response.data;
+//     console.log(`Weather in ${city}:`);
+//     console.log(`- Temperature: ${weatherData.main.temp}°C`);
+//     console.log(`- Description: ${weatherData.weather[0].description}`);
+//     console.log(`- Humidity: ${weatherData.main.humidity}%`);
+//     console.log(`- Wind Speed: ${weatherData.wind.speed} m/s`);
+//   })
+//   .catch(error => {
+//     console.error('Error fetching weather data:', error.message);
+//   }); -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    #weather-container {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather App</h1>
+  <label for="cityInput">Enter City:</label>
+  <input type="text" id="cityInput" placeholder="Enter city name">
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div id="weather-container"></div>
+  <div id="error-message"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    function getWeather() {
+      const apiKey = 'cbe5ca98cdcfe2f79192326e2e3a894f';
+      const cityInput = document.getElementById('cityInput');
+      const city = cityInput.value;
+      const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+      axios.get(apiUrl)
+        .then(response => {
+          const weatherData = response.data;
+          const weatherContainer = document.getElementById('weather-container');
+          const errorMessage = document.getElementById('error-message');
+
+          errorMessage.innerHTML = ''; // Clear previous error messages
+          
+          weatherContainer.innerHTML = `
+            <h2>Weather in ${city}:</h2>
+            <p>Temperature: ${weatherData.main.temp}°C</p>
+            <p>Description: ${weatherData.weather[0].description}</p>
+            <p>Humidity: ${weatherData.main.humidity}%</p>
+            <p>Wind Speed: ${weatherData.wind.speed} m/s</p>
+          `;
+        })
+        .catch(error => {
+          const errorMessage = document.getElementById('error-message');
+          errorMessage.innerHTML = `Error fetching weather data: ${error.message}`;
+        });
+    }
+  </script>
+</body>
+</html>
