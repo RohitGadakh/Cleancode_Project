@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" class="form-control mb-2" readonly>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-secondary" onclick="clearDisplay()">C</button>
+        <button class="btn btn-secondary" onclick="appendToDisplay('')">±</button>
+        <button class="btn btn-secondary" onclick="appendToDisplay('%')">%</button>
+        <button class="btn btn-warning" onclick="appendToDisplay('/')">/</button>
+    </div>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-light" onclick="appendToDisplay('7')">7</button>
+        <button class="btn btn-light" onclick="appendToDisplay('8')">8</button>
+        <button class="btn btn-light" onclick="appendToDisplay('9')">9</button>
+        <button class="btn btn-warning" onclick="appendToDisplay('*')">*</button>
+    </div>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-light" onclick="appendToDisplay('4')">4</button>
+        <button class="btn btn-light" onclick="appendToDisplay('5')">5</button>
+        <button class="btn btn-light" onclick="appendToDisplay('6')">6</button>
+        <button class="btn btn-warning" onclick="appendToDisplay('-')">-</button>
+    </div>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-light" onclick="appendToDisplay('1')">1</button>
+        <button class="btn btn-light" onclick="appendToDisplay('2')">2</button>
+        <button class="btn btn-light" onclick="appendToDisplay('3')">3</button>
+        <button class="btn btn-warning" onclick="appendToDisplay('+')">+</button>
+    </div>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-light" onclick="appendToDisplay('0')">0</button>
+        <button class="btn btn-light" onclick="appendToDisplay('.')">.</button>
+        <button class="btn btn-success" onclick="calculateResult()">=</button>
+    </div>
+</div>
+
+<script>
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function calculateResult() {
+        try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+</script>
+
+</body>
+</html>

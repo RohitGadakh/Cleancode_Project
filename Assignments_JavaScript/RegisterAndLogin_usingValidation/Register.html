@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+form{
+    margin: 30px 400px;
+    border: 2px solid black;
+    padding: 30px;
+    padding-left: 80px;
+   border-radius: 30px;
+   background-color:rgb(219, 157, 214);
+}
+input{
+    width: 250px;
+    height: 25px;
+}
+body {
+background-image: linear-gradient(to right, rgb(233, 83, 238) , rgb(245, 245, 88));
+}
+button{
+    background-color: rgb(234, 241, 132);
+    padding: 8px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <form action="">
+        <br>
+        <label for="uname"><b>Full Name:</b></label><br>
+        <input type="text" id="uname" name="uname" placeholder="Enter full name" required><br><br>
+        <label for="mob" ><b>Mobile No:</b></label><br>
+        <input type="number" id="mob" name="mob" placeholder="enter 10-digit number" required><br><br>
+        <label for="email"><b>Email Id:</b></label><br>
+        <input type="email" id="email" name="email" placeholder="Enter email-id" required><br><br>
+        <label for="pass"><b>Password:</b></label><br>
+        <input type="text" id="pass" name="pass" placeholder="Enter Password" required><br><br>
+        <label for="Cpass"><b> Confirm Password:</b></label><br>
+        <input type="text" id="Cpass" name="Cpass" placeholder="Enter Correct Password" required><br><br><br>
+
+        <button type="submit" onclick="registerUser()"><i>Register</i></button>
+        &nbsp;&nbsp; <button type="submit" ><a href="Login.html"></a><i> If Already register? Login</i></button><br>
+        <!-- <link rel="stylesheet" ></link> -->
+        <!-- <Link href="Login.html">If Already register ? Login</Link> -->
+        <br><br>
+    </form>
+    <script>
+        // var pas1=document.getElementById('pass');
+        // var pas2=document.getElementById('Cpass');
+        function registerUser() {
+    var username = document.getElementById("email").value;
+    var password = document.getElementById("pass").value;
+  
+    
+    localStorage.setItem("email", username);
+    localStorage.setItem("pass", password);
+  
+    // Show login form and hide registration form
+    // document.getElementById("register-form").style.display = "none";
+    // document.getElementById("login-form").style.display = "block";
+  }
+    </script>
+</body>
+</html>

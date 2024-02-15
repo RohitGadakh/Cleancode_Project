@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btable{
+        margin: 20px auto;
+    }
+    #btable img{
+        width: 100px; /* Adjust the width as needed */
+      height: auto;
+    }
+</style>
+<body>
+    <table id="btable">
+    <tr>
+        <td>
+            <img src="" alt="" id="bid">
+            <!-- <img src="images/red_Balloon.webp" id="redBallon"> -->
+            <!-- <img src="images/green_Balloon.webp" id="greenBallon">
+            <img src="images/blue_Balloon.webp" id="blueBallon"> -->
+        </td>
+    </tr>
+    <tr>
+        <td id="bname" colspan="3"></td>
+    </tr>
+</table >
+    <div style="text-align: center;">
+        <button onclick="showRedBalloon()">Red</button>
+        <button onclick="showBlueBalloon()">Blue</button>
+        <button onclick="showGreenBalloon()">Green</button>
+    </div>
+    <script>
+   function showRedBalloon(){
+    document.getElementById('bid').setAttribute('src',"./images/red_Balloon.webp");
+   document.getElementById('bname').innerHTML='shows red ballon';
+}
+   function showGreenBalloon(){
+      document.getElementById('bid').setAttribute('src',"./images/green_Balloon.webp");
+      document.getElementById('bname').innerHTML='shows green ballon';
+   }
+   function showBlueBalloon(){
+      document.getElementById('bid').setAttribute('src',"./images/blue_Balloon.webp");
+      document.getElementById('bname').innerHTML='shows Blue ballon';
+   }
+
+   
+    </script>
+</body>
+</html>

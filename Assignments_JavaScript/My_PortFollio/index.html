@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/78ae276ee6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container"> 
+            <nav>
+                <img src="images/logo3.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+            <div class="header-text">
+             <p>FullStack Developer </p>
+             <h1>Hi, I'm <span>Rohit</span> Gadakh <br>From Pune</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                   <img src="images/myphoto1.jpg" alt="" class="">
+                </div>
+            
+                <div class="about-col-2">
+                  <h1 class="sub-title">About Me</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur,
+                     adipisicing elit. Exercitationem alias
+                      laudantium totam dolorum facere, 
+                      qui repellendus rem minus eveniet quaerat
+                       nostrum corrupti ad accusantium ut ullam, 
+                       tenetur distinctio cumque iusto!</p>
+               
+                       <div class="tab-title">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FrontEnd Development</span><br>Designing User Interfaces</li>
+                            <li><span>Backend Development</span><br>Designing server side logic</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - 2024</span><br>Internship of Cleancode pvt.Ltd</li>
+                            <li><span>2018 - 2022</span><br>Quality Assurance Engineer</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>CDAC PG-DAC Pune</li>
+                            <li><span>2017</span><br>Bachlor of Mechanical Engg.</li>
+                            <li><span>2013</span><br>Higher secondary Education 12th</li>
+                            <li><span>2011</span><br>Secondary Education 10th</li>
+                        </ul>
+                       </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services section -->
+    <div id="services">
+        <div class=" container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis 
+                        odit nesciunt pariatur necessitatibus officia molestias repellendus,
+                         quisquam similique eligendi temporibus optio illo,
+                        </p>
+                        <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis 
+                        odit nesciunt pariatur necessitatibus officia molestias repellendus,
+                         quisquam similique eligendi temporibus optio illo,
+                        </p>
+                        <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis 
+                        odit nesciunt pariatur necessitatibus officia molestias repellendus,
+                         quisquam similique eligendi temporibus optio illo,
+                        </p>
+                        <a href="">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfollio section -->
+    <div id="portfolio">
+        <div class="container">
+         <h1 class="sub-title">My Work</h1>
+         <div class="work-list">
+            <div class="work">
+                <img src="images/work_Images/work3.jpg">
+                <div class="layer">
+                    <h3>HelthPlus Application</h3>
+                    <p>It ia a platform where user book doctor online and take
+                         helthcare related activities</p>
+                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work_Images/work3.jpg">
+                <div class="layer">
+                    <h3>HelthPlus Application</h3>
+                    <p>It ia a platform where user book doctor online and take
+                         helthcare related activities</p>
+                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work_Images/work3.jpg">
+                <div class="layer">
+                    <h3>HelthPlus Application</h3>
+                    <p>It ia a platform where user book doctor online and take
+                         helthcare related activities</p>
+                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+         </div>
+         <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- contact section -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>gadakhrohit@31gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91-8999603910</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https//:www.linkedin.com/in/therohitgadakh"><i class="fa-brands fa-linkedin"></i></a>
+                
+                </div>
+                <a href="images/Cdac resume .pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                       <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Rohit. Made by Rohit Gadakh</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabContents=document.getElementsByClassName('tab-contents');
+        //var tablinks=document.getElementsByClassName('tab-links');
+    
+        function opentab(tabname){
+           for(tablink of tablinks){
+            tablink.classList.remove('active-links');
+           }
+           for(tabContent of tabContents){
+            tabContent.classList.remove('active-tab');
+           }
+           event.currentTarget.classList.add('active-links');
+           document.getElementById(tabname).classList.add('active-tab')
+        }
+    </script>
+</body>
+</html>

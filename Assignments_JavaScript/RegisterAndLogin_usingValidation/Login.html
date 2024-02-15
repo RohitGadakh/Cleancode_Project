@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        margin: 120px 450px;
+        border: 2px solid black;
+        padding: 40px;
+        padding-left: 80px;
+       border-radius: 30px;
+       background-color:rgb(219, 157, 214);
+    }
+    input{
+    width: 200px;
+    height: 25px;
+}
+    body {
+  background-image: linear-gradient(to right, rgb(233, 83, 238) , rgb(245, 245, 88));
+}
+button{
+    background-color: rgb(234, 241, 132);
+    padding: 8px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <form action="">
+        <br>
+        <label for="email"><b>Email Id:</b></label><br>
+        <input type="email" id="email" name="email" placeholder="Enter email-id" required><br><br>
+        <label for="pass"><b>Password:</b></label><br>
+
+        <input type="text" id="pass" name="pass" placeholder="Enter Password" required><br><br><br>
+        
+        <button type="submit" onclick="loginUser()"><i>login</i></button>
+        &nbsp;&nbsp;<button type="submit"><i>Forgot Password</i></button>
+        <br><br>
+    </form>
+    <script>
+        function loginUser() {
+    var loginUsername = document.getElementById("email").value;
+    var loginPassword = document.getElementById("pass").value;
+  
+    // Retrieve registration data
+    var storedUsername = localStorage.getItem("email");
+    var storedPassword = localStorage.getItem("pass");
+  
+    // Check if login credentials match registration data
+    if (loginUsername === storedUsername && loginPassword === storedPassword) {
+      // Display success message
+    //   document.getElementById("login-form").style.display = "none";
+    //   document.getElementById("successMessage").style.display = "block";
+    //   document.getElementById("message").innerText = "Login successful! Welcome, " + loginUsername + "!";
+         location.href="AfterLogin.html";
+        
+} else {
+      alert("Invalid login credentials. Please try again.");
+    }
+  }
+  
+    </script>
+</body>
+</html>

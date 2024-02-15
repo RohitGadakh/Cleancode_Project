@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="stopwatch">
+    <h1 id="display">00:00:00 <span id="milliseconds">00</span></h1>
+    <button class="btn btn-primary" onclick="startStopwatch()">Start</button>
+    <button class="btn btn-secondary" onclick="stopStopwatch()">Stop</button>
+    <button class="btn btn-danger" onclick="resetStopwatch()">Reset</button>
+    <button class="btn btn-info" onclick="recordLapTime()">Lap</button>
+    <ul id="lapTimes" class="list-group mt-3"></ul>
+  </div>
+</div>
+
+<script>
+  let startTime, elapsedTime, intervalId;
+  let isRunning = false;
+  let lapCounter = 1;
+
+  function startStopwatch() {
+    if (!isRunning) {
+      isRunning = true;
+      startTime = new Date().getTime() - elapsedTime;
+      intervalId = setInterval(updateTime, 10);
+    }
+  }
+
+  function stopStopwatch() {
+    if (isRunning) {
+      isRunning = false;
+      clearInterval(intervalId);
+    }
+  }
+
+  function resetStopwatch() {
+    stopStopwatch();
+    elapsedTime = 0;
+    updateDisplay();
+    lapCounter = 1;
+    document.getElementById("lapTimes").innerHTML = "";
+  }
+
+  function recordLapTime() {
+    if (isRunning) {
+      const lapTime = elapsedTime;
+      const lapItem = document.createElement("li");
+      lapItem.className = "list-group-item";
+      lapItem.textContent = `Lap ${lapCounter++}: ${formatTime(lapTime)}`;
+      document.getElementById("lapTimes").appendChild(lapItem);
+    }
+  }
+
+  function updateTime() {
+    elapsedTime = new Date().getTime() - startTime;
+    updateDisplay();
+  }
+
+  function updateDisplay() {
+    const formattedTime = formatTime(elapsedTime);
+    document.getElementById("display").textContent = formattedTime;
+    document.getElementById("milliseconds").textContent = pad(Math.floor((elapsedTime % 1000) / 10));
+  }
+
+  function formatTime(time) {
+    const hours = pad(Math.floor(time / 3600000));
+    const minutes = pad(Math.floor((time % 3600000) / 60000));
+    const seconds = pad(Math.floor((time % 60000) / 1000));
+    return `${hours}:${minutes}:${seconds}`;
+  }
+
+  function pad(value) {
+    return value < 10 ? `0${value}` : value;
+  }
+</script>
+
+</body>
+</html>

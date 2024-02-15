@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #balloonTable {
+      margin: 20px auto;
+      /* border: 2px solid black; */
+    }
+    #balloonTable img {
+      width: 100px; /* Adjust the width as needed */
+      height: auto;
+      display: none;
+    }
+    #messageRow {
+      text-align: center;
+    }
+   
+  </style>
+  <title>Balloon Buttons</title>
+</head>
+<body>
+
+<!-- Balloon Table -->
+<table id="balloonTable">
+  <tr>
+    <td><img id="redBalloon" src="images/red_Balloon.webp" alt="Red Balloon"></td>
+    <td><img id="greenBalloon" src="images/green_Balloon.webp" alt="Green Balloon"></td>
+    <td><img id="blueBalloon" src="images/blue_Balloon.webp" alt="Blue Balloon"></td>
+  </tr>
+  <tr id="messageRow">
+    <td colspan="3"></td>
+  </tr>
+</table>
+
+<!-- Buttons -->
+<div style="text-align: center;">
+  <button onclick="showBalloon('red')">Show Red Balloon</button>
+  <button onclick="showBalloon('green')">Show Green Balloon</button>
+  <button onclick="showBalloon('blue')">Show Blue Balloon</button>
+</div>
+
+<script>
+  function showBalloon(color) {
+    // Hide all balloons
+    hideAllBalloons();
+
+    // Show the selected balloon
+    let imageId = color + 'Balloon';
+    let imageElement = document.getElementById(imageId);
+    imageElement.style.display = 'flex';
+
+    // Update the message
+    updateMessage(`You clicked to show the ${color} balloon.`);
+  }
+
+  function hideAllBalloons() {
+    let balloons = document.querySelectorAll('#balloonTable img');
+    balloons.forEach(balloon => {
+      balloon.style.display = 'none';
+    });
+  }
+
+  function updateMessage(message) {
+    document.querySelector('#messageRow td').innerHTML = message;
+  }
+</script>
+
+</body>
+</html>
