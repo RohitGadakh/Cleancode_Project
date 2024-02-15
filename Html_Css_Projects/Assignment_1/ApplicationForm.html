@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Job Application Form:</h2>
+    </div>
+    <div class="d1">
+        
+        <form>
+            <fieldset>
+                <legend><b><i>Personal Information:</i></b></legend><br>
+                <label for="fName"><b>Full Name:</b></label><br>
+                <input type="text" id="fName" name="fName" ><br><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" id="email" name="email" ><br><br>
+                <label for="phone"><b>Phone Number:</b></label><br>
+                <input type="number" id="phone" name="phone" placeholder="Entre 10-digit phone number"><br><br>
+                <label for="gender"><b>Gender:</b></label><br>
+                <select name="gender" id="gender" style="width: 170px;">
+                    <option value="Male">Male</option>
+                    <option value="Male">Female</option>
+                    <option value="Male">Other</option>
+                </select>
+            <br>
+            <br>
+            </fieldset>
+        
+            <br>
+            <fieldset>
+                <legend><b><i>Education:</i></b></legend>
+                <br>
+                <label for="pg"><b>Highest Degree Obtained:</b></label><br>
+                <input type="text" id="pg" name="pg" ><br><br>
+                <label for="university"><b>University:</b></label><br>
+                <input type="text" id="university" name="university" ><br><br>
+                <label for="year"><b>Graduation Year:</b></label><br>
+                <input type="number" id="year" name="year" ><br><br>
+                
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b><i>Experience:</i></b></legend><br>
+                <label for="title"><b>Previous Job Title:</b></label>
+                <input type="text" id="title" name="title" ><br><br>
+                <label for="yoe"><b>Year Of Experience:</b></label>
+                <input type="number" id="yoe" name="yoe" ><br><br>
+                <label for="lang"><b>Programming Languages(Cheak all that apply):</b></label><br><br>
+                Java:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="java" name="java" ><br><br>
+                Python:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="python" name="python" ><br><br>
+                JavaScript:&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" id="javaScript" name="javaScript" ><br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b><i>Additional Information:</i></b></legend><br>
+                <label for="letter"><b>Cover Letter:</b></label><br>
+                <!-- <input type="text" id="letter" name="letter" ><br><br> -->
+               <textarea id="letter" name="letter" rows="3" cols="30"></textarea><br><br>
+                <label for="link"><b>Portfolio Link:</b></label><br>
+                <input type="text" id="link" name="link" placeholder="http://example.com" ><br><br>
+                <label for=""><b>How did you hear about the job:</b></label><br>
+                
+                <select id="link" name="link" style="width: 170px;">
+                    <option value="social media">Social Media</option>
+                    <option value="Naukari.com">Naukari.com</option>
+                    <option value="Linkedin">Linkedin</option>
+                    <option value="carrier sites">Carrier Sites</option>
+                    <option value="company website">Company Website</option>
+                </select>
+            </fieldset><br>
+           &nbsp; <button type="submit" style="background-color: green;"><b>Submit Application</b></button>
+        </form>
+    
+    </div>
+
+</body>
+</html>
