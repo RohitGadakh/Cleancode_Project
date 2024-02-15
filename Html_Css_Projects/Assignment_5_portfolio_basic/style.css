@@ -1,0 +1,11 @@
+/* Add your custom styles here */
+
+body {
+    padding-top: 56px; /* Adjusted for fixed navbar height */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
