@@ -1,0 +1,38 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /*  the subtotal, taxes, and grand total */
+  p {
+    margin: 5px 0;
+  }
+  
+  /*  the GeneratedInvoice component */
+  .GeneratedInvoice {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f8f6f6;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #4caf50;
+  }
+  
